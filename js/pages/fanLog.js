@@ -159,7 +159,6 @@ export const delete_comment = async (event) => {
 };
 
 export const getCommentList = async (searchContent, searchList) => {
-  console.log(authService);
   let cmtObjList = [];
   let showList = [];
 
@@ -177,17 +176,6 @@ export const getCommentList = async (searchContent, searchList) => {
   });
 
   //검색어, 검색어를 포함하는 결과리스트 콘솔값
-  console.log(
-    "여기는 getCommentList함수 안",
-    "searchContent :",
-    typeof searchContent,
-    searchContent,
-    "searchList :",
-    typeof searchList,
-    searchList,
-    "cmtObjList :",
-    cmtObjList
-  );
 
   if (searchContent != undefined && searchContent.length != 0) {
     showList = searchList;
@@ -198,9 +186,11 @@ export const getCommentList = async (searchContent, searchList) => {
   const commnetList = document.getElementById("comment-list");
   const currentUid = authService.currentUser.uid;
   commnetList.innerHTML = "";
+  // debugger;
   showList.forEach((cmtObj) => {
+    // debugger;
+
     const isOwner = currentUid === cmtObj.creatorId;
-    // console.log("cmtObj가 뭐지? => ", cmtObj);
     const temp_html = `
                 <div class="friends_post">
 
@@ -314,6 +304,7 @@ export const getCommentList = async (searchContent, searchList) => {
 `;
     const div = document.createElement("div");
     div.classList.add("mycards");
+    // debugger;
     div.innerHTML = temp_html;
     commnetList.appendChild(div);
   });
@@ -337,17 +328,17 @@ export const getCommentList_mypage = async (searchContent, searchList) => {
   });
 
   //검색어, 검색어를 포함하는 결과리스트 콘솔값
-  console.log(
-    "여기는 getCommentList_mypage 함수 안",
-    "searchContent :",
-    typeof searchContent,
-    searchContent,
-    "searchList :",
-    typeof searchList,
-    searchList,
-    "cmtObjList :",
-    cmtObjList
-  );
+  // console.log(
+  //   "여기는 getCommentList_mypage 함수 안",
+  //   "searchContent :",
+  //   typeof searchContent,
+  //   searchContent,
+  //   "searchList :",
+  //   typeof searchList,
+  //   searchList,
+  //   "cmtObjList :",
+  //   cmtObjList
+  // );
 
   if (searchContent != undefined && searchContent.length != 0) {
     showList = searchList;
@@ -483,7 +474,7 @@ export const getCommentList_mypage = async (searchContent, searchList) => {
 };
 
 export const getCommentList_main_before = async (searchContent, searchList) => {
-  console.log(authService);
+  // console.log(authService);
   let cmtObjList = [];
   let showList = [];
 
@@ -500,17 +491,17 @@ export const getCommentList_main_before = async (searchContent, searchList) => {
     cmtObjList.push(commentObj);
   });
 
-  console.log(
-    "여기는 getCommentList_main_before 함수 안",
-    "searchContent :",
-    typeof searchContent,
-    searchContent,
-    "searchList :",
-    typeof searchList,
-    searchList,
-    "cmtObjList :",
-    cmtObjList
-  );
+  // console.log(
+  //   "여기는 getCommentList_main_before 함수 안",
+  //   "searchContent :",
+  //   typeof searchContent,
+  //   searchContent,
+  //   "searchList :",
+  //   typeof searchList,
+  //   searchList,
+  //   "cmtObjList :",
+  //   cmtObjList
+  // );
 
   if (searchContent != undefined && searchContent.length != 0) {
     showList = searchList;
@@ -669,8 +660,13 @@ export const getSearchResult = async (event) => {
   });
 
   getCommentList_main_before(searchContent, searchList);
+
+  if (window.location.hash === "#mypage") {
+    getCommentList_mypage(searchContent, searchList);
+    return;
+  }
+
   getCommentList(searchContent, searchList);
-  getCommentList_mypage(searchContent, searchList);
 };
 
 window.toggleMenu = toggleMenu;
