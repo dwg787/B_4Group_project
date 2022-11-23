@@ -1,0 +1,236 @@
+ <div class="main">
+
+       <nav>
+                <img src="image/logo.png" class="logo" onclick="goTomain()">
+                <form id="searchForm" onsubmit="getSearchResult(event)">
+                    <div class="mx-auto input-group mb-3">
+                      <input
+                        id="searchInput"
+                        name="q"
+                        type="text"
+                        class="form-control rounded-pill"
+                        placeholder="Search"
+                        aria-label="Recipient's username"
+                        aria-describedby="button-addon2"
+                      />
+                      <button type="submit" form="searchForm">검색</button>
+                    </div>
+                  </form>
+                <img src="image/user.png" class="user-pic" id="top_bar_image" onclick="toggleMenu()">
+
+                <div class="sub-menu-wrap" id="subMenu">
+                    <div class="sub-menu">
+                        <div class="user-info">
+                            <img src="image/user.png" id="dropdown_profile2">
+
+                        </div>
+
+                        <div id="dropdown_email2"></div>
+                        <div id="dropdown_nickname2"></div>
+                        <hr>
+
+                        <a href="#" class="sub-menu-link">
+                            <img src="image/profile.png">
+                            <p>Edit profile</p>
+                            <span></span>
+                        </a>
+                        <a href="#" class="sub-menu-link" onclick="logout()">
+                            <img src="image/logout.png">
+                            <p>Logout</p>
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+
+            </nav>
+        <!------------center---------------------->
+
+        <div class="center">
+
+
+
+            <div class="top_box">
+                    <form id="profileForm" onsubmit="changeProfile(event)">
+                            <label id="imgLabel" for="imgInput">
+                              <img src="image/user.png" id="mypage_profile" />
+
+                              <input
+                                onchange="onFileChange(event)"
+                                id="imgInput"
+                                type="file"
+                                accept="images/*"
+                                class="noDisplay"
+                              />
+                            </label>
+                        <div class="profile_input">
+                            <div>
+                              <input
+                                      class="form-control"
+                                id="profileNickname"
+                                type="text"
+                                placeholder="현재 닉네임"
+                                value=""
+                              />
+                            </div>
+                            </br>
+                            <input id="profileBtn" type="submit" value="프로필 변경" />
+                        </div>
+                          </form>
+
+                          <div class="my_info">
+                            <p class="email" id="mypage_email">example@.com</p>
+                            <p class="name" id="mypage_nickname">Nickname</p>
+      </div>
+
+            </div>
+
+
+            <div class="my_post">
+
+                <div class="post_top">
+
+                    <img src="image/profile.png" id="post_top_profile">
+                    <input class="form-control"
+                    placeholder="Leave a comment here"
+                    id="comment"
+                     >
+
+                </div>
+
+                <hr>
+
+                <div class="post_bottom">
+
+
+                   <button  class="post_icon">
+
+                        <span class="material-symbols-outlined" id="img_color">
+                            image
+                            </span>
+                        <span>
+                            image
+                        </span>
+                    </button>
+                    <button onclick="save_comment(event)" type="button" class="post_icon">
+                        <span class="material-symbols-outlined" id="send_color">
+                            send
+                            </span>
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+            <div id="comment-list">
+
+                <div class="friends_post">
+
+                <div class="friend_post_top">
+
+                    <div class="img_and_name">
+
+                        <div class="post_img"><img src="image/post_1.jpg"> </div>
+
+                        <div class="comment_box">
+                            <div class="name_and_time">
+                                <span class="friends_name">
+                                Senuda De Silva
+                            </span>
+                            <span class="time">16h.</span>
+                            </div>
+                            <div><span>답글내용</span></div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="menu">
+
+                        <span class="material-symbols-outlined">
+                        edit
+                        </span>
+                        <span class="material-symbols-outlined">
+                        delete
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <img src="image/post_1.jpg">
+
+                <div class="info">
+
+                    <div class="emoji_img">
+                        <img src="image/like.png">
+
+                        <p>You, Charith Disanayaka and 25K others</p>
+                    </div>
+
+                    <div class="comment">
+                        <p>421 Comments</p>
+
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <div class="like">
+
+                    <div class="like_icon">
+                        <i class="fa-solid fa-thumbs-up activi"></i>
+                        <p>Like</p>
+                    </div>
+
+                    <div class="like_icon">
+                        <i class="fa-solid fa-message"></i>
+                        <p>Comments</p>
+                    </div>
+
+
+
+                </div>
+
+                <hr>
+
+                <div class="comment_warpper">
+
+                    <img src="image/profile.png">
+                    <div class="circle"></div>
+
+                    <div class="comment_search">
+
+                        <input type="text" placeholder="Write a comment">
+                        <i class="fa-regular fa-face-smile"></i>
+                        <i class="fa-solid fa-camera"></i>
+                        <i class="fa-regular fa-note-sticky"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+            </div>
+
+
+
+
+
+            <div class="loard">
+                <button>Loard More</button>
+            </div>
+
+
+
+
+        </div>
+
+
+
+    </div>

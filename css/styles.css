@@ -1,0 +1,387 @@
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/*-----------------------------------------로그인--------------------------------------------------*/
+
+
+button{
+    border:none;
+    background-color: white;
+}
+
+
+input{
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 0.5px double #c7c7c7;
+    box-sizing: border-box;
+}
+
+input:focus{
+    outline: none;
+    border-bottom: 0.5px double #1a73e8;
+}
+
+
+html { height: 100%;
+        min-height: 700px}
+
+body { height: 100%; }
+
+#root{
+    height: 100%;
+}
+
+.scene { height : 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.full-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -5;
+}
+.full-bg img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    filter: brightness(70%);
+}
+
+.login_layout{
+    width: 1200px;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.team_logo img{
+    position: absolute;
+    left: ;
+    width: 280px;
+}
+
+#login_lo{
+    position: relative;
+    transition: all ease 0.35s 0s;
+    left: 0px;
+}
+
+#password_lo{
+    position: absolute;
+    transition: all ease 0.35s 0s;
+    right: 100%;
+}
+
+
+
+
+
+.login_form_lo_hide{
+    transition: all ease 0.35s 0s;
+    left: -50px;
+}
+
+.login_form{
+    width: 560px;
+    height: 700px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    border: 1px double #707070;
+}
+.title{
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.user_info{
+    height: 160px;
+    display: flex;
+    align-items: center;
+
+}
+
+.profile_image{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px double #707070;
+
+}
+
+.user_email{
+    font-weight: 400;
+font-size: 20px;
+line-height: 29px;
+    margin-left: 10px ;
+}
+
+.input_layout{
+    height: 60px;
+        display: flex;
+    flex-direction: column;
+}
+
+.input_name{
+    color: #a8a8a8;
+    font-size: 17px;
+    font-weight: 300;
+
+}
+
+.input_h{
+    height: 35px;
+}
+
+
+.info_layout{
+    height: 24.5px;
+}
+
+
+#email_info {
+    font-weight: 300;
+    font-size: 15px;
+    color: #FF4D4D;
+}
+
+#password_info {
+    font-weight: 300;
+    font-size: 15px;
+    color: #FF4D4D;
+
+}
+
+#email_value{
+
+}
+
+
+.login_button_layout{
+    display: flex;
+    justify-content: space-between;
+}
+
+#login_button{
+    height: 40px;
+    width: 80px;
+    border-radius: 40px;
+    background-color: #1a73e8;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+#signin_button{
+    height: 40px;
+    width: 80px;
+    border-radius: 40px;
+    background-color: #1a73e8;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#password_button{
+    height: 40px;
+    width: 80px;
+    border-radius: 40px;
+    background-color: #1a73e8;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.login_button_name{
+    color: white;
+    line-height: 38px;
+}
+
+.separate{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.separate_short_line{
+    height: 1px;
+    width: 195px;
+    border-bottom: 0.5px double #c7c7c7;
+}
+
+.separate_long_line{
+    height: 1px;
+    width: 100%;
+    border-bottom: 0.5px double #c7c7c7;
+}
+
+
+.or{
+    font-size: 20px;
+    font-weight: 300;
+    color: #707070;
+}
+
+.google_login_button{
+    height: 60px;
+    border-radius: 30px;
+    border: 1px double #707070;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.google_logo img{
+    width: 22px;
+    height: 22px;
+    margin-bottom: 6px;
+    margin-right: 6px;
+}
+
+.google_login_continue{
+    font-size: 20px;
+    font-weight: 400;
+    color: #707070;
+
+}
+.link_lo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.new_user{
+    font-weight: 400;
+    font-size: 17px;
+    color: #707070;
+}
+
+.create_link{
+    font-weight: 400;
+    font-size: 17px;
+    color: #1a73e8;
+
+}
+
+.flex_di_ro{
+    flex-direction: row;
+}
+
+.red_line{
+    border-bottom: 1px double #FF4D4D;
+}
+
+.grin_string{
+    color: #3E9B09;
+}
+
+.red_string{
+    color: #FF4D4D;
+}
+
+
+/*-----------------------------------------회원가입 1창 추가--------------------------------------------------*/
+
+
+.step_1 {
+    font-weight: 300;
+    font-size: 15px;
+    color: #707070;
+}
+
+.mar_5{
+    margin-top: 5px;
+}
+
+
+.mar_8{
+    margin-top: 8px;
+}
+
+
+.mar_l_10{
+    margin-left: 10px;
+}
+
+.mar_10{
+    margin-top: 10px;
+}
+
+
+.mar_15{
+    margin-top: 15px;
+}
+
+.mar_20{
+    margin-top: 20px;
+}
+
+.mar_18{
+    margin-top: 18px;
+}
+
+.mar_25{
+    margin-top: 25px ;
+}
+
+.mar_35{
+    margin-top: 35px;
+}
+
+.mar_30{
+    margin-top: 30px;
+}
+
+.mar_47{
+    margin-top: 47px;
+}
+
+.mar_50{
+    margin-top: 50px;
+}
+
+.mar_65{
+    margin-top: 65px;
+}
+
+.password_dir {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.mar_100{
+    margin-top: 100px;
+}
+
+.mar_115{
+    margin-top: 115px;
+}
+
+.mar_140{
+    margin-top: 140px;
+}
+.mar_a{
+    margin-top: auto;
+}
+
+/*-----------------------------------------비밀번호 입력창 추가-------------------------------------------------

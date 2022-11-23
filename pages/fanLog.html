@@ -1,0 +1,64 @@
+<div>
+  <div class="mypic">
+    <h1>조이현 팬명록</h1>
+    <div id="profileMngr">
+      <div id="profileMngr">
+        <img
+          id="profileImg2"
+          width="50px"
+          height="50px"
+          src="/assets/blankProfile.webp"
+          onclick="toggleMenu()"
+        />
+        <!-- <button onclick="goToProfile()">프로필 관리</button> -->
+        <!-- <button onclick="logout()">로그아웃</button> -->
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+              <div class="user-info">
+                <img
+                  id="profileImg3"
+                  width="50px"
+                  height="50px"
+                  src="/assets/blankProfile.webp"
+                />
+                <!-- <img src="user.png" /> -->
+                <div id="nickname-profile">닉네임</div>
+                <div id="account-info">계정 정보 들어가는 곳</div>
+              </div>
+              <hr />
+              <ul>
+                <li><img onclick="goToProfile()" src="../assets/edit_FILL1_wght400_GRAD0_opsz48 1.png" alt="프로필 관리" width="50px" height="50px"></img></li>
+                <li><img onclick="logout()" src="../assets/logout_FILL0_wght400_GRAD0_opsz48.png" alt="로그아웃" width="50px" height="50px"></img></li>
+              </ul>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="mypost">
+      <div class="form-floating mb-3">
+        <img
+          id="profileImg"
+          width="50px"
+          height="50px"
+          src="/assets/blankProfile.webp"
+        />
+        <span id="nickname">닉네임</span>
+      </div>
+      <div class="form-floating">
+        <textarea
+          class="form-control"
+          placeholder="Leave a comment here"
+          id="comment"
+          style="height: 100px"
+        ></textarea>
+        <label for="floatingTextarea2">응원댓글</label>
+      </div>
+
+      <button onclick="save_comment(event)" type="button" class="btn btn-dark">
+        응원 남기기
+      </button>
+    </div>
+    <div id="comment-list"></div>
+  </div>
+</div>

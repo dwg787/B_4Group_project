@@ -1,0 +1,121 @@
+
+<div class="scene">
+  <div class="full-bg">
+    <img src="" alt="">
+  </div>
+  <div class="login_layout">
+    <div class="team_logo">
+      <img src="images/logo.png">
+    </div>
+
+    <div id="login_form_lo">
+
+<div class="login_form">
+
+                <div class="login_title">
+
+                  <span class="title">회원가입</span>
+
+                </div>
+
+                <div class="input_layout mar_100">
+
+                  <div class="input_name_lo">
+
+                    <span class="input_name">이메일 주소</span>
+
+                  </div>
+
+                  <input type="email" class="input_h" id="email_value">
+
+                </div>
+
+                <div class="info_layout">
+
+                  <span id="email_info"></span>
+
+                </div>
+
+                <div class="input_layout mar_10">
+
+                  <div class="input_name_lo">
+
+                    <span class="input_name">비밀번호</span>
+
+                  </div>
+
+                  <input type="password" class="input_h" id="password_value" oninput="CreatePasswordCheck()">
+
+                </div>
+
+                <div class="info_layout">
+
+                  <span id="password_info"></span>
+
+                </div>
+
+                <div class="login_button_layout " onclick="">
+
+                  <div class="password_dir">
+
+                    <span>암호 생성:</span><br>
+
+                    <span id="password_info_over_string">•&nbsp;&nbsp;최소 8개 이상의 문자열,하나 이상의 숫자, 기호 포함</span>
+
+
+                  </div>
+
+                  <button id="signin_button" onclick="CreateFunction(event)">
+
+                <span class="login_button_name">
+
+                  계속
+
+              </span>
+
+                  </button>
+
+                </div>
+
+                <button class="google_login_button mar_30 " id="google_login_button" onclick="GoogleLogin()">
+                  <div class="google_logo">
+                    <img src="images/google_logo.png">
+                    <span class="google_login_continue">Google로 회원가입</span>
+                  </div>
+
+
+                </button>
+
+
+            <button class="google_login_button mar_10 " id="github_login_button"  onclick="GitHubLogin()">
+                  <div class="google_logo">
+                    <img src="images/GitHub_logo.png">
+                    <span class="google_login_continue">Github으로 회원가입</span>
+                  </div>
+
+
+                </button>
+
+
+                <div class="link_lo flex_di_ro mar_a">
+                      <a href="" class="create_link"></a>
+
+                <a href="#" class="create_link" onclick="route(event)">로그인</a>
+
+
+              </div>
+
+
+
+              </div>
+
+    </div>
+
+
+  </div>
+</div>
+
+
+
+
+
